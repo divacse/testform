@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomination Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Nomination Form</h1>
+    </div>
+    <div class="intro">
+      <p>Dear Principal,</p>
+      <p>The AUS 2024 is an exclusive opportunity for top grade 12 students from some of the most prestigious schools to explore how liberal education in India aligns with the country’s economic growth, offering a unique path to their success after graduation. We invite you to nominate teams of three students each to participate in this unique event.</p>
+    </div>
+    <form id="nominationForm" method="POST" action="submit.php">
+      <table>
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Champion Student's Name</th>
+            <th>Phone Number</th>
+            <th>Accompanying Parent/s Name/s</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Generate rows for 10 teams with 3 students each -->
+          <!-- Each input field is uniquely named based on the team number and student number -->
+
+          <!-- Team 1 -->
+          <tr>
+            <td rowspan="3">Team 1</td>
+            <td><input type="text" name="team1_student1_name" required></td>
+            <td><input type="text" name="team1_student1_phone" required></td>
+            <td><input type="text" name="team1_parent1_name" required></td>
+            <td><input type="text" name="team1_parent1_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team1_student2_name" required></td>
+            <td><input type="text" name="team1_student2_phone" required></td>
+            <td><input type="text" name="team1_parent2_name" required></td>
+            <td><input type="text" name="team1_parent2_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team1_student3_name" required></td>
+            <td><input type="text" name="team1_student3_phone" required></td>
+            <td><input type="text" name="team1_parent3_name" required></td>
+            <td><input type="text" name="team1_parent3_phone" required></td>
+          </tr>
+
+          <!-- Repeat the above structure for Teams 2 through 10 -->
+          <!-- Example for Team 2 -->
+          <tr>
+            <td rowspan="3">Team 2</td>
+            <td><input type="text" name="team2_student1_name" required></td>
+            <td><input type="text" name="team2_student1_phone" required></td>
+            <td><input type="text" name="team2_parent1_name" required></td>
+            <td><input type="text" name="team2_parent1_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team2_student2_name" required></td>
+            <td><input type="text" name="team2_student2_phone" required></td>
+            <td><input type="text" name="team2_parent2_name" required></td>
+            <td><input type="text" name="team2_parent2_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team2_student3_name" required></td>
+            <td><input type="text" name="team2_student3_phone" required></td>
+            <td><input type="text" name="team2_parent3_name" required></td>
+            <td><input type="text" name="team2_parent3_phone" required></td>
+          </tr>
+
+          <!-- Continue for Teams 3 through 10 -->
+
+          <!-- Team 3 through Team 10 (follow the same pattern as above) -->
+          <!-- You can copy the above block and replace `team1`, `team2`, etc., for each subsequent team -->
+
+          <!-- Example for Team 10 -->
+          <tr>
+            <td rowspan="3">Team 3</td>
+            <td><input type="text" name="team3_student1_name" required></td>
+            <td><input type="text" name="team3_student1_phone" required></td>
+            <td><input type="text" name="team3_parent1_name" required></td>
+            <td><input type="text" name="team3_parent1_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team3_student2_name" required></td>
+            <td><input type="text" name="team3_student2_phone" required></td>
+            <td><input type="text" name="team3_parent2_name" required></td>
+            <td><input type="text" name="team3_parent2_phone" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="team3_student3_name" required></td>
+            <td><input type="text" name="team3_student3_phone" required></td>
+            <td><input type="text" name="team3_parent3_name" required></td>
+            <td><input type="text" name="team3_parent3_phone" required></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">*The first 5 teams will attend the summit free of charge, while subsequent teams will be required to pay a nominal registration fee of ₹900.</p>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fbe4e4;
+  color: #6d1f7b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #6d1f7b;
+  border-radius: 8px;
+}
+
+.header h1 {
+  text-align: center;
+  color: #6d1f7b;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #6d1f7b;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+th {
+  background-color: #f1d4f4;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #6d1f7b;
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  background-color: #6d1f7b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #4c125b;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  th, td {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .note {
+    font-size: 0.8em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+</style>
